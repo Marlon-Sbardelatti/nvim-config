@@ -23,7 +23,46 @@ return {
 
         dapui.setup()
         require("dap-go").setup()
+
         require("dap-python").setup("uv")
+        dap.configurations.python = {
+            {
+                type = "python",
+                request = "launch",
+                name = "FastAPI (uvicorn)",
+                module = "uvicorn",
+                args = {
+                    "app.main:app",
+                    "--host", "0.0.0.0",
+                    "--port", "8000",
+                },
+                justMyCode = true,
+            },
+
+            {
+                type = "python",
+                request = "launch",
+                name = "FastAPI (no reload)",
+                module = "uvicorn",
+                args = {
+                    "main:app",
+                    "--host", "0.0.0.0",
+                    "--port", "8000",
+                },
+                justMyCode = true,
+            },
+
+            -- 🧠 Attach to running process (BEST for Docker/reload)
+            {
+                type = "python",
+                request = "attach",
+                name = "Attach FastAPI (debugpy)",
+                connect = {
+                    host = "127.0.0.1",
+                    port = 5678,
+                },
+            },
+        }
 
         dap.listeners.before.attach.dapui_config = function()
             dapui.open()
