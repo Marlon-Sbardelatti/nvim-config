@@ -2,12 +2,12 @@ return {
     "mfussenegger/nvim-dap",
     keys = {
         { "<leader>dt", function() require("dap").toggle_breakpoint() end },
-        { "<F1>", function() require("dap").continue() end },
-        { "<F2>", function() require("dap").step_into() end },
-        { "<F3>", function() require("dap").step_over() end },
-        { "<F4>", function() require("dap").step_out() end },
-        { "<F5>", function() require("dap").step_back() end },
-        { "<F12>", function() require("dap").restart() end },
+        { "<F1>",       function() require("dap").continue() end },
+        { "<F2>",       function() require("dap").step_into() end },
+        { "<F3>",       function() require("dap").step_over() end },
+        { "<F4>",       function() require("dap").step_out() end },
+        { "<F5>",       function() require("dap").step_back() end },
+        { "<F12>",      function() require("dap").restart() end },
     },
     dependencies = {
         {
@@ -52,7 +52,6 @@ return {
                 justMyCode = true,
             },
 
-            -- 🧠 Attach to running process (BEST for Docker/reload)
             {
                 type = "python",
                 request = "attach",
@@ -62,6 +61,21 @@ return {
                     port = 5678,
                 },
             },
+            {
+                type = "python",
+                request = "launch",
+                name = "FastAPI (uvicorn dynamic port)",
+                module = "uvicorn",
+                args = function()
+                    local port = vim.fn.input("Port: ", "8000")
+                    return {
+                        "app.main:app",
+                        "--host", "0.0.0.0",
+                        "--port", port,
+                    }
+                end,
+                justMyCode = true,
+            }
         }
 
         dap.listeners.before.attach.dapui_config = function()
