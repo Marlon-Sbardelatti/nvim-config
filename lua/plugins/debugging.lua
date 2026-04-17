@@ -16,12 +16,14 @@ return {
             dependencies = { "nvim-neotest/nvim-nio" },
         },
         "leoluz/nvim-dap-go",
-        "mfussenegger/nvim-dap-python"
+        "mfussenegger/nvim-dap-python",
+        "thehamsta/nvim-dap-virtual-text"
     },
     config = function()
         local dap = require("dap")
         local dapui = require("dapui")
-
+        local virtualText = require("nvim-dap-virtual-text")
+        virtualText.setup()
         dapui.setup()
         require("dap-go").setup()
 
@@ -92,4 +94,5 @@ return {
             dapui.close()
         end
     end,
+
 }

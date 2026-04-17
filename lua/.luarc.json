@@ -3,5 +3,8 @@
         "vim",
         "local",
         "Function"
+    ],
+    "diagnostics.disable": [
+        "missing-parameter"
     ]
 }
