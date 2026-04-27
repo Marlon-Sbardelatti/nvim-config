@@ -11,7 +11,6 @@ fzf = require("fzf-lua").setup({
         border = "solid",
         preview = {
             horizontal = "right:65%",
-            -- border = "none"
             border = "solid",
         },
     },
