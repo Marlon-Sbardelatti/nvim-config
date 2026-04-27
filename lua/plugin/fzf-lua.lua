@@ -3,7 +3,9 @@ vim.pack.add({
     "https://github.com/ibhagwan/fzf-lua"
 })
 
-require("fzf-lua").setup({
+local fzf = require("fzf-lua")
+
+fzf.setup({
     winopts = {
         layout = "horizontal",
         height = 0.9,
@@ -25,7 +27,6 @@ require("fzf-lua").setup({
     },
 })
 
-local fzf = require("fzf-lua")
 
 -- Files
 vim.keymap.set("n", "<leader>pf", fzf.files, { desc = "Find Files" })
