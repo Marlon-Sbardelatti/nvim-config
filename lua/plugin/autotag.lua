@@ -1,6 +1,6 @@
 return {
   "windwp/nvim-ts-autotag",
-  ft = { "html", "htmlangular" }, 
+  ft = { "html", "htmlangular" },
   opts = {
     autotag = {
       enable = true,

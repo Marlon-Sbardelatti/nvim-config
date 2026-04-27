@@ -98,7 +98,7 @@ return {
             -- })
 
             vim.lsp.config('ty', {
-                capabilities = capabilities
+                capabilities = capabilities,
                 -- settings = {
                 --     ty = {
                 --         completions = {

@@ -7,9 +7,11 @@ return {
                 layout = "horizontal",
                 height = 0.9,
                 width = 0.94,
-                border = "rounded",
+                border = "solid",
                 preview = {
                     horizontal = "right:65%",
+                    -- border = "none"
+                    border = "solid",
                 },
             },
             fzf_opts = {
@@ -17,7 +19,8 @@ return {
             },
             keymap = {
                 fzf = {
-                    ["ctrl-q"] = "select-all+accept",
+                    ["ctrl-a"] = "select-all",
+                    ["ctrl-d"] = "deselect-all",
                 },
             },
         },
@@ -25,15 +28,15 @@ return {
             local fzf = require("fzf-lua")
             return {
                 { "<leader>pf",       function() fzf.files() end,                 desc = "Find Files" },
-                { "<leader>gw",       function() fzf.grep_cword() end,                 desc = "Grep Cursor Word" },
-                { "<leader>gW",       function() fzf.grep_cWORD() end,                 desc = "Grep Cursor Word" },
+                { "<leader>gw",       function() fzf.grep_cword() end,            desc = "Grep Cursor Word" },
+                { "<leader>gW",       function() fzf.grep_cWORD() end,            desc = "Grep Cursor Word" },
                 { "<leader>pg",       function() fzf.live_grep() end,             desc = "Grep" },
                 { "<leader>of",       function() fzf.oldfiles() end,              desc = "Recent Files" },
-                { "<leader>rs",       function() fzf.resume() end,              desc = "Resume Picker" },
+                { "<leader>rs",       function() fzf.resume() end,                desc = "Resume Picker" },
                 { "<leader><leader>", function() fzf.blines() end,                desc = "Buffer Lines" },
                 { "<leader>bf",       function() fzf.grep_curbuf() end,           desc = "Grep Current Buffer" },
-                { "<leader>sd",       function() fzf.diagnostics_workspace() end, desc = "Diagnostics" },
-                { "<leader>sD",       function() fzf.diagnostics_document() end,  desc = "Buffer Diagnostics" },
+                { "<leader>sD",       function() fzf.diagnostics_workspace() end, desc = "Diagnostics" },
+                { "<leader>sd",       function() fzf.diagnostics_document() end,  desc = "Buffer Diagnostics" },
                 { "gd",               function() fzf.lsp_definitions() end,       desc = "Goto Definition" },
                 { "gD",               function() fzf.lsp_declarations() end,      desc = "Goto Declaration" },
                 { "gr",               function() fzf.lsp_references() end,        desc = "References" },
