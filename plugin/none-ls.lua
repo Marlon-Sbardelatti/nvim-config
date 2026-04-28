@@ -10,7 +10,7 @@ null_ls.setup({
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier,
         require("none-ls.formatting.ruff_format"),
-        require("none-ls.diagnostics.ruff"),
+        -- require("none-ls.diagnostics.ruff"),
         null_ls.builtins.formatting.biome,
         null_ls.builtins.diagnostics.erb_lint,
         null_ls.builtins.diagnostics.kube_linter,
