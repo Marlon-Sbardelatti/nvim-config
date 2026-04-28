@@ -5,7 +5,7 @@ vim.pack.add({
 })
 
 vim.g.db_ui_use_nerd_fonts = 1
-vim.keymap.set("n", "<leader>dp", "<cmd>DBUIToggle<CR>", { desc = "Toggle DBUI" })
+vim.keymap.set("n", "<leader>db", "<cmd>DBUIToggle<CR>", { desc = "Toggle DBUI" })
 
 -- return {
 --     {
