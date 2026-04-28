@@ -4,12 +4,7 @@ vim.pack.add({
     "https://github.com/kristijanhusak/vim-dadbod-completion"
 })
 
-require("plugins.vim-dadbod").setup({
-    init = function()
-        vim.g.db_ui_use_nerd_fonts = 1
-    end,
-})
-
+vim.g.db_ui_use_nerd_fonts = 1
 vim.keymap.set("n", "<leader>dp", "<cmd>DBUIToggle<CR>", { desc = "Toggle DBUI" })
 
 -- return {

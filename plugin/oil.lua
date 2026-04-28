@@ -3,7 +3,7 @@ vim.pack.add({
     "https://github.com/stevearc/oil.nvim"
 })
 
-require("oil.nvim").setup({
+require("oil").setup({
     view_options = {
         show_hidden = true,
     },

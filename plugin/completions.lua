@@ -1,6 +1,5 @@
 vim.pack.add({
     "https://github.com/onsails/lspkind.nvim",
-    "https://github.com/saadparwaiz1/cmp_luasnip",
     "https://github.com/L3MON4D3/LuaSnip",
     "https://github.com/rafamadriz/friendly-snippets",
 })
@@ -27,7 +26,7 @@ require('blink.cmp').setup({
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
-require("plugins.luasnip")
+require("luasnip")
 
 
 -- return {

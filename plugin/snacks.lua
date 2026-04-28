@@ -2,7 +2,7 @@ vim.pack.add({
     "https://github.com/folke/snacks.nvim"
 })
 
-require("snacks.nvim").setup({
+require("snacks").setup({
     input = {
         enabled = true,
     },

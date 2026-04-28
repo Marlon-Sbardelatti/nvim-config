@@ -2,7 +2,7 @@
 vim.pack.add({
     "https://github.com/tpope/vim-fugitive"
 })
-require("vim-fugitive").setup()
+-- require("vim-fugitive").setup()
 vim.keymap.set("n", "<leader>gs", "<cmd>Git<CR>", { desc = "Git Status" })
 
 -- gitsigns
