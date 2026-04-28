@@ -23,6 +23,7 @@ fzf.setup({
         fzf = {
             ["ctrl-a"] = "select-all",
             ["ctrl-d"] = "deselect-all",
+            ["ctrl-q"] = "select-all+accept",
         },
     },
 })
