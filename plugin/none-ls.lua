@@ -6,14 +6,14 @@ vim.pack.add({
 local null_ls = require("null-ls")
 null_ls.setup({
     sources = {
-        require("none-ls.diagnostics.eslint_d"),
+        require("none-ls.formatting.ruff_format"),
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier,
-        require("none-ls.formatting.ruff_format"),
-        -- require("none-ls.diagnostics.ruff"),
         null_ls.builtins.formatting.biome,
         null_ls.builtins.diagnostics.erb_lint,
         null_ls.builtins.diagnostics.kube_linter,
+        -- require("none-ls.diagnostics.eslint_d"),
+        -- require("none-ls.diagnostics.ruff"),
     },
 })
 

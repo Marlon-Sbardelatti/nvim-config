@@ -22,8 +22,6 @@ mason_lspconfig.setup({
 
 local capabilities = cmp.get_lsp_capabilities()
 
-require("lspconfig")
-
 -- define once
 vim.lsp.config("rust_analyzer", {
     capabilities = capabilities,
