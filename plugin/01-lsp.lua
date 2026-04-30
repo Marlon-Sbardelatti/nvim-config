@@ -1,5 +1,5 @@
 vim.pack.add({
-	"https://github.com/saghen/blink.lib",
+    "https://github.com/saghen/blink.lib",
 })
 vim.pack.add({ "https://github.com/saghen/blink.lib", "https://github.com/saghen/blink.cmp" })
 
@@ -7,21 +7,29 @@ local cmp = require("blink.cmp")
 cmp.build():wait(60000)
 
 cmp.setup({
-	keymap = {
-		preset = "default",
-		["<C-k>"] = { "snippet_forward", "fallback" },
-		["<C-j>"] = { "snippet_backward", "fallback" },
-	},
-	completion = { documentation = { auto_show = true } },
-	snippets = { preset = "luasnip" },
-	sources = { default = { "lsp", "path", "snippets", "buffer" } },
-	fuzzy = { implementation = "rust" },
+    keymap = {
+        preset = "default",
+        ["<C-k>"] = { "snippet_forward", "fallback" },
+        ["<C-j>"] = { "snippet_backward", "fallback" },
+    },
+    completion = { documentation = { auto_show = true } },
+    snippets = { preset = "luasnip" },
+    sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+        per_filetype = {
+            sql = { 'snippets', 'dadbod', 'buffer' }
+        },
+        providers = {
+            dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+        }
+    },
+    fuzzy = { implementation = "rust" },
 })
 
 vim.pack.add({
-	"https://github.com/williamboman/mason.nvim",
-	"https://github.com/williamboman/mason-lspconfig.nvim",
-	"https://github.com/neovim/nvim-lspconfig",
+    "https://github.com/williamboman/mason.nvim",
+    "https://github.com/williamboman/mason-lspconfig.nvim",
+    "https://github.com/neovim/nvim-lspconfig",
 })
 
 local mason = require("mason")
@@ -29,82 +37,82 @@ mason.setup()
 
 local mason_lspconfig = require("mason-lspconfig")
 mason_lspconfig.setup({
-	auto_install = true,
+    auto_install = true,
 })
 
 local capabilities = cmp.get_lsp_capabilities()
 
 -- define once
 vim.lsp.config("rust_analyzer", {
-	capabilities = capabilities,
-	diagnostic = {
-		refreshSupport = false,
-	},
+    capabilities = capabilities,
+    diagnostic = {
+        refreshSupport = false,
+    },
 })
 vim.lsp.config("bashls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("html", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("lua_ls", {
-	capabilities = capabilities,
-	settings = {
-		Lua = {
-			runtime = {
-				version = "LuaJIT",
-			},
-			diagnostics = {
-				globals = { "love" },
-			},
-			workspace = {
-				library = {
-					vim.fn.expand("~/.local/share/lua-types/love2d/library"),
-				},
-				checkThirdParty = false,
-			},
-			telemetry = {
-				enable = false,
-			},
-		},
-	},
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
+            },
+            diagnostics = {
+                globals = { "love" },
+            },
+            workspace = {
+                library = {
+                    vim.fn.expand("~/.local/share/lua-types/love2d/library"),
+                },
+                checkThirdParty = false,
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
 })
 
 vim.lsp.config("cssls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("biome", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("cssmodules_ls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("eslint", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("emmet_ls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("emmet_language_server", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("gopls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("clangd", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 vim.lsp.config("csharp_ls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 -- vim.lsp.config("pyright", {
@@ -112,25 +120,25 @@ vim.lsp.config("csharp_ls", {
 -- })
 
 vim.lsp.config("ty", {
-	capabilities = capabilities,
-	-- settings = {
-	--     ty = {
-	--         completions = {
-	--             autoImport = true,
-	--         },
-	--     },
-	-- },
+    capabilities = capabilities,
+    -- settings = {
+    --     ty = {
+    --         completions = {
+    --             autoImport = true,
+    --         },
+    --     },
+    -- },
 })
 -- vim.lsp.config("pyrefly", {
 --     capabilities = capabilities,
 -- })
 
 vim.lsp.config("ruff", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("prettier", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 -- vim.lsp.config("dartls", {
@@ -139,69 +147,69 @@ vim.lsp.config("prettier", {
 -- })
 
 vim.lsp.config("sqlls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("sqls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("docker_compose_language_service", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("dockerls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("angularls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("ts_ls", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("kube-linter", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.config("yaml-language-server", {
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 vim.lsp.enable({
-	"rust_analyzer",
-	"html",
-	"lua_ls",
-	"cssls",
-	"biome",
-	"cssmodules_ls",
-	"eslint",
-	"emmet_ls",
-	"emmet_language_server",
-	"gopls",
-	"clangd",
-	"csharp_ls",
-	"ty",
-	"ruff",
-	"prettier",
-	"sqlls",
-	"sqls",
-	"docker_compose_language_service",
-	"dockerls",
-	"angularls",
-	"ts_ls",
-	"kube-linter",
-	"yaml-language-server",
-	"bashls",
+    "rust_analyzer",
+    "html",
+    "lua_ls",
+    "cssls",
+    "biome",
+    "cssmodules_ls",
+    "eslint",
+    "emmet_ls",
+    "emmet_language_server",
+    "gopls",
+    "clangd",
+    "csharp_ls",
+    "ty",
+    "ruff",
+    "prettier",
+    "sqlls",
+    "sqls",
+    "docker_compose_language_service",
+    "dockerls",
+    "angularls",
+    "ts_ls",
+    "kube-linter",
+    "yaml-language-server",
+    "bashls",
 })
 
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 vim.keymap.set("n", "<leader>cd", function()
-	require("fzf-lua").lsp_code_actions()
+    require("fzf-lua").lsp_code_actions()
 end, {})
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, {})

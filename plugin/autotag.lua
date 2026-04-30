@@ -4,6 +4,7 @@ require("nvim-ts-autotag").setup({
         enable = true,
     },
 })
+
 -- return {
 --   "windwp/nvim-ts-autotag",
 --   ft = { "html", "htmlangular" },
