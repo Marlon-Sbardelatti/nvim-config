@@ -36,7 +36,6 @@ vim.keymap.set("n", "<leader>st", [[:%s/\<<C-r><C-w>\>/]])
 vim.keymap.set("n", "<leader>sT", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gi<Left><Left><Left>")
 
 vim.keymap.set("n", "<leader>sg", [[:%s/]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<cr>", { silent = true })
 
 vim.keymap.set("n", "<leader>vs", function()
     vim.cmd("vsplit")
@@ -70,11 +69,6 @@ vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
-
-vim.keymap.set("n", "<leader>cp", ":CccPick<CR>")
-
-vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
-vim.keymap.set('n', 'S', '<Plug>(leap-from-window)')
 
 vim.keymap.set("n", "<leader>>", ":vertical resize +20<CR>")
 vim.keymap.set("n", "<leader><", ":vertical resize -20<CR>")
