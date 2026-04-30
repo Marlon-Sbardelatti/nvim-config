@@ -12,6 +12,9 @@ null_ls.setup({
         null_ls.builtins.formatting.biome,
         null_ls.builtins.diagnostics.erb_lint,
         null_ls.builtins.diagnostics.kube_linter,
+        null_ls.builtins.completion.spell.with({
+            filetypes = { "text", "markdown", "gitcommit" },
+        }),
         -- require("none-ls.diagnostics.eslint_d"),
         -- require("none-ls.diagnostics.ruff"),
     },

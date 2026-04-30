@@ -5,11 +5,11 @@
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
     "blink.cmp": {
-      "rev": "1617522ae80ca2436813da8afe2fc4b1280e975d",
+      "rev": "404ab55beb8b63d4c4be4bfd4e528441745b000a",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
-      "rev": "dda2666685a5ac3598166577d2e34f1fff6b1637",
+      "rev": "e8f1503206f3013b0521996a92d834e458ad5600",
       "src": "https://github.com/saghen/blink.lib"
     },
     "cmp_luasnip": {
@@ -46,7 +46,7 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "markview.nvim": {
-      "rev": "e3829d35674fa0537ed2a3aceffb6f79b412d52b",
+      "rev": "8b82823bbe7b452c5920ab22947e186c6cb067b4",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mason-lspconfig.nvim": {
@@ -110,7 +110,7 @@
       "src": "https://github.com/thehamsta/nvim-dap-virtual-text"
     },
     "nvim-lspconfig": {
-      "rev": "0e25d7445ba0d7cc0ad02a39aa843cc8b9d2525e",
+      "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
