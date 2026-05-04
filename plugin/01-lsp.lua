@@ -205,11 +205,17 @@ vim.lsp.enable({
     "bashls",
 })
 
-vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-vim.keymap.set("n", "<leader>cd", function()
-    require("fzf-lua").lsp_code_actions()
-end, {})
+-- built in
+-- vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+-- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+--  if fzf-lua is set as the ui, this keymaps are not necessary
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+-- vim.keymap.set("n", "gra", function()
+    --     require("fzf-lua").lsp_code_actions()
+    -- end, {})
+    -- vim.keymap.set("v", "gra", function()
+        --   require("fzf-lua").lsp_code_actions()
+        -- end, {})
+
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, {})

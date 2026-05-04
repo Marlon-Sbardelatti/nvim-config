@@ -4,6 +4,7 @@ vim.pack.add({
 })
 
 local fzf = require("fzf-lua")
+require("fzf-lua").register_ui_select()
 
 fzf.setup({
     winopts = {
