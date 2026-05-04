@@ -1,16 +1,10 @@
-vim.pack.add({ "https://github.com/windwp/nvim-ts-autotag" })
-require("nvim-ts-autotag").setup({
-    autotag = {
-        enable = true,
-    },
+vim.pack.add({
+	{
+		src = "https://github.com/windwp/nvim-ts-autotag",
+		ft = { "html", "htmlangular", "javascriptreact", "typescriptreact", "vue", "svelte" },
+	},
 })
 
--- return {
---   "windwp/nvim-ts-autotag",
---   ft = { "html", "htmlangular" },
---   opts = {
---     autotag = {
---       enable = true,
---     },
---   },
--- }
+require("nvim-ts-autotag").setup({
+	enable = true,
+})
