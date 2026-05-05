@@ -137,7 +137,7 @@ vim.lsp.config("ruff", {
     capabilities = capabilities,
 })
 
-vim.lsp.config("prettier", {
+vim.lsp.config("prettierd", {
     capabilities = capabilities,
 })
 
