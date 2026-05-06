@@ -32,6 +32,5 @@ vim.opt.winborder = "rounded"
 
 vim.opt.ignorecase = true -- case insensitive search
 vim.opt.smartcase = true -- case sensitive if uppercase in string
-vim.opt.hlsearch = true -- highlight search matches
 vim.opt.incsearch = true -- show matches as you type
 vim.opt.updatetime = 300 -- faster completion
