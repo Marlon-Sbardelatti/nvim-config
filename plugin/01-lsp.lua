@@ -137,7 +137,7 @@ vim.lsp.config("ruff", {
     capabilities = capabilities,
 })
 
-vim.lsp.config("prettierd", {
+vim.lsp.config("prettier", {
     capabilities = capabilities,
 })
 
@@ -211,11 +211,11 @@ vim.lsp.enable({
 --  if fzf-lua is set as the ui, this keymaps are not necessary
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 -- vim.keymap.set("n", "gra", function()
-    --     require("fzf-lua").lsp_code_actions()
-    -- end, {})
-    -- vim.keymap.set("v", "gra", function()
-        --   require("fzf-lua").lsp_code_actions()
-        -- end, {})
+--     require("fzf-lua").lsp_code_actions()
+-- end, {})
+-- vim.keymap.set("v", "gra", function()
+--   require("fzf-lua").lsp_code_actions()
+-- end, {})
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, {})
