@@ -1,34 +1,33 @@
 vim.pack.add({
-    "https://github.com/nvim-tree/nvim-web-devicons",
-    "https://github.com/ibhagwan/fzf-lua"
+	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/ibhagwan/fzf-lua",
 })
 
 local fzf = require("fzf-lua")
 require("fzf-lua").register_ui_select()
 
 fzf.setup({
-    winopts = {
-        layout = "horizontal",
-        height = 0.9,
-        width = 0.94,
-        border = "solid",
-        preview = {
-            horizontal = "right:65%",
-            border = "solid",
-        },
-    },
-    fzf_opts = {
-        ["--layout"] = "reverse",
-    },
-    keymap = {
-        fzf = {
-            ["ctrl-a"] = "select-all",
-            ["ctrl-d"] = "deselect-all",
-            ["ctrl-q"] = "select-all+accept",
-        },
-    },
+	winopts = {
+		layout = "horizontal",
+		height = 0.9,
+		width = 0.94,
+		border = "solid",
+		preview = {
+			horizontal = "right:65%",
+			border = "solid",
+		},
+	},
+	fzf_opts = {
+		["--layout"] = "reverse",
+	},
+	keymap = {
+		fzf = {
+			["ctrl-a"] = "select-all",
+			["ctrl-d"] = "deselect-all",
+			["ctrl-q"] = "select-all+accept",
+		},
+	},
 })
-
 
 -- Files
 vim.keymap.set("n", "<leader>pf", fzf.files, { desc = "Find Files" })

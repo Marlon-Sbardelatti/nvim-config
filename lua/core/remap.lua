@@ -20,7 +20,7 @@ vim.keymap.set("v", "<leader>z", '"zy')
 
 vim.keymap.set("n", "<leader>Z", '"zp')
 
-vim.keymap.set("n", "<leader>np", 'o<esc>p')
+vim.keymap.set("n", "<leader>np", "o<esc>p")
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
@@ -38,31 +38,32 @@ vim.keymap.set("n", "<leader>sT", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gi<Left><Left
 vim.keymap.set("n", "<leader>sg", [[:%s/]])
 
 vim.keymap.set("n", "<leader>vs", function()
-    vim.cmd("vsplit")
+	vim.cmd("vsplit")
 end)
 
 vim.keymap.set("n", "<leader>hs", function()
-    vim.cmd("split")
+	vim.cmd("split")
 end)
 
 vim.keymap.set("n", "<leader>tr", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        vim.highlight.on_yank()
-    end,
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
-vim.api.nvim_create_autocmd('ModeChanged', {
-    pattern = '*',
-    callback = function()
-        if ((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
-            and require('luasnip').session.current_nodes[vim.api.nvim_get_current_buf()]
-            and not require('luasnip').session.jump_active
-        then
-            require('luasnip').unlink_current()
-        end
-    end
+vim.api.nvim_create_autocmd("ModeChanged", {
+	pattern = "*",
+	callback = function()
+		if
+			((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
+			and require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
+			and not require("luasnip").session.jump_active
+		then
+			require("luasnip").unlink_current()
+		end
+	end,
 })
 
 vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
