@@ -178,6 +178,10 @@ vim.lsp.config("yaml-language-server", {
     capabilities = capabilities,
 })
 
+vim.lsp.config("kulala", {
+    capabilities = capabilities,
+})
+
 vim.lsp.enable({
     "rust_analyzer",
     "html",
@@ -204,6 +208,7 @@ vim.lsp.enable({
     "kube-linter",
     "yaml-language-server",
     "bashls",
+    "kulala"
 })
 
 -- built in
