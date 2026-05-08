@@ -77,6 +77,19 @@ ls.add_snippets("go", {
 		t({ "", "}" }),
 	}),
 })
+ls.add_snippets("go", {
+	s("ifen", {
+		t({ "if err != nil {", "\t" }),
+		i(1, ""),
+		t({ "", "}" }),
+	}),
+})
+
+ls.add_snippets("sql", {
+	s("atria", {
+		t({ "359214da-a3ee-4fc6-9903-3645dd8dd178"}),
+	}),
+})
 
 -- Keymaps
 vim.keymap.set({ "i", "s" }, "<C-k>", function()
