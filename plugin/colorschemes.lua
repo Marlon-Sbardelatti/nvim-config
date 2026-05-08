@@ -22,3 +22,4 @@ require("neomodern").setup({
 	}),
 })
 vim.cmd.colorscheme("roseprime")
+
