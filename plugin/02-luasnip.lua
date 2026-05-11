@@ -77,6 +77,42 @@ ls.add_snippets("go", {
 		t({ "", "}" }),
 	}),
 })
+ls.add_snippets("go", {
+	s("ifen", {
+		t({ "if err != nil {", "\t" }),
+		i(1, ""),
+		t({ "", "}" }),
+	}),
+})
+
+local atria_snippets = {
+	s("atria", {
+		t({ "359214da-a3ee-4fc6-9903-3645dd8dd178" }),
+	}),
+	s("orga", {
+		t({ "ea726071-851b-477e-8002-402ebabe8769" }),
+	}),
+	s("marlon", {
+		t({ "13215292-3d8f-47ae-9651-277da5a59186" }),
+	}),
+	s("sofia", {
+		t({ "864f7fe8-4874-4447-b26e-083668ec9670" }),
+	}),
+	s("iago", {
+		t({ "e80fe00c-5be5-44ed-b5b6-6026cf66fee0" }),
+	}),
+	s("powerbi", {
+		t({ "a7617541-4bde-4d53-ba7a-76c9e6723776" }),
+	}),
+	s("chat", {
+		t({ "f947518f-ae46-49c5-80ff-f31f50cf8e46" }),
+	}),
+	s("simulator", {
+		t({ "a11e0f55-d3ea-44f9-8e91-8cf0d7bcb275" }),
+	}),
+}
+ls.add_snippets("sql", atria_snippets)
+ls.add_snippets("http", atria_snippets)
 
 -- Keymaps
 vim.keymap.set({ "i", "s" }, "<C-k>", function()
