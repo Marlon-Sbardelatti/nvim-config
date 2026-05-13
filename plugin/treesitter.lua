@@ -1,11 +1,11 @@
 vim.pack.add({
-    "https://github.com/nvim-treesitter/nvim-treesitter",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
 require("nvim-treesitter.config").setup({
-    highlight = {
-        enable = true,
-    },
+	highlight = {
+		enable = true,
+	},
 })
 
 vim.api.nvim_create_autocmd("PackChanged", {
@@ -19,7 +19,6 @@ vim.api.nvim_create_autocmd("PackChanged", {
 		end
 	end,
 })
-
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "http", "rest" },
