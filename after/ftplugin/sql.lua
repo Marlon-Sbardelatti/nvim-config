@@ -1,1 +1,1 @@
-vim.keymap.set("n", "<CR>", ":w<CR>")
+vim.keymap.set("n", "<CR>", ":w<CR")
