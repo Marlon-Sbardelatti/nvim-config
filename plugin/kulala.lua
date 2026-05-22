@@ -5,7 +5,10 @@ vim.filetype.add({
 })
 
 vim.pack.add({
-	"https://github.com/mistweaverco/kulala.nvim",
+	{
+		src = "https://github.com/mistweaverco/kulala.nvim",
+		version = "v5.3.4",
+	},
 })
 
 require("kulala").setup({
@@ -13,16 +16,3 @@ require("kulala").setup({
 	global_keymaps_prefix = "<leader>R",
 	kulala_keymaps_prefix = "",
 })
-
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = { "http", "rest" },
---   callback = function()
---     vim.keymap.set("n", "<leader>Rs", function()
---       require("kulala").run()
---     end, { desc = "Send request", buffer = true })
---
---     vim.keymap.set("n", "<leader>Ra", function()
---       require("kulala").run_all()
---     end, { desc = "Send all requests", buffer = true })
---   end,
--- })
