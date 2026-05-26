@@ -39,3 +39,9 @@ require("oil").setup({
 	},
 	use_default_keymaps = true,
 })
+
+vim.keymap.set("n", "<leader>E", function()
+  vim.cmd("topleft vsplit")
+  vim.cmd("vertical resize 40")
+  require("oil").open()
+end)
