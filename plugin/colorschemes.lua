@@ -21,5 +21,10 @@ require("neomodern").setup({
 		},
 	}),
 })
-vim.cmd.colorscheme("roseprime")
 
+vim.pack.add({"https://github.com/savq/melange-nvim"})
+
+vim.pack.add({"https://github.com/aktersnurra/no-clown-fiesta.nvim"})
+
+-- USED COLORSCHEME
+vim.cmd.colorscheme("moon")
