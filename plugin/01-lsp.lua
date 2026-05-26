@@ -195,9 +195,9 @@ vim.lsp.config("yaml-language-server", {
 	capabilities = capabilities,
 })
 
-vim.lsp.config("kulala", {
-	capabilities = capabilities,
-})
+-- vim.lsp.config("kulala", {
+-- 	capabilities = capabilities,
+-- })
 
 vim.lsp.enable({
 	"rust_analyzer",
