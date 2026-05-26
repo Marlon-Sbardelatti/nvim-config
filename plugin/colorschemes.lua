@@ -2,7 +2,7 @@ vim.pack.add({ "https://github.com/casedami/neomodern.nvim" })
 require("neomodern").setup({
 	require("neomodern").setup({
 		bg = "transparent",
-		theme = "roseprime",
+		theme = "moon",
 
 		gutter = {
 			cursorline = false,
@@ -21,5 +21,5 @@ require("neomodern").setup({
 		},
 	}),
 })
-vim.cmd.colorscheme("roseprime")
+vim.cmd.colorscheme("moon")
 

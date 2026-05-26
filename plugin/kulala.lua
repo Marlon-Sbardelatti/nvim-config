@@ -8,6 +8,7 @@ vim.pack.add({
 	{
 		src = "https://github.com/mistweaverco/kulala.nvim",
 		version = "v5.3.4",
+		-- version = "v6.2.0",
 	},
 })
 
