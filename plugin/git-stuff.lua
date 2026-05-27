@@ -2,8 +2,10 @@
 vim.pack.add({
 	"https://github.com/tpope/vim-fugitive",
 })
--- require("vim-fugitive").setup()
-vim.keymap.set("n", "<leader>gs", "<cmd>Git<CR>", { desc = "Git Status" })
+
+vim.keymap.set("n", "<leader>gs", function()
+	vim.cmd("tab Git")
+end, { desc = "Git Status" })
 
 -- gitsigns
 vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
