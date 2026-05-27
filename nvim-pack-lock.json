@@ -34,7 +34,7 @@
       "version": "'harpoon2'"
     },
     "kulala.nvim": {
-      "rev": "b92e6e962fc84a0e6b82d4c8e25c1f460f08289f",
+      "rev": "87601ddef556f21888c59e0a2713873ad73f9c29",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lspkind.nvim": {
@@ -135,7 +135,7 @@
       "src": "https://github.com/windwp/nvim-ts-autotag"
     },
     "nvim-web-devicons": {
-      "rev": "0d7d35fa946837b8738b17c18d1faa1ac351e7f9",
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "oil.nvim": {

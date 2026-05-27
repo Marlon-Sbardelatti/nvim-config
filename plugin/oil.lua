@@ -36,6 +36,21 @@ require("oil").setup({
 				vim.fn.setreg("+", vim.fn.getreg(vim.v.register))
 			end,
 		},
+		["yn"] = {
+			desc = "Copy filename to system clipboard",
+			callback = function()
+				local oil = require("oil")
+				local entry = oil.get_cursor_entry()
+
+				if not entry then
+					return
+				end
+
+				local filename = vim.fn.fnamemodify(entry.name, ":t")
+
+				vim.fn.setreg("+", filename)
+			end,
+		},
 	},
 	use_default_keymaps = true,
 })
