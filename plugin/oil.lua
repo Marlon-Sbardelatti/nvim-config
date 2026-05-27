@@ -55,8 +55,17 @@ require("oil").setup({
 	use_default_keymaps = true,
 })
 
+local oil_win = nil
 vim.keymap.set("n", "<leader>E", function()
-  vim.cmd("topleft vsplit")
-  vim.cmd("vertical resize 40")
-  require("oil").open()
+	if oil_win and vim.api.nvim_win_is_valid(oil_win) then
+		vim.api.nvim_win_close(oil_win, true)
+		oil_win = nil
+		return
+	end
+
+	vim.cmd("topleft vsplit")
+	vim.cmd("vertical resize 40")
+	require("oil").open()
+
+	oil_win = vim.api.nvim_get_current_win()
 end)
