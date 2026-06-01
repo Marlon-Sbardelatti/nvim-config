@@ -239,6 +239,6 @@ vim.lsp.enable({
 -- vim.keymap.set("v", "gra", function()
 --   require("fzf-lua").lsp_code_actions()
 -- end, {})
+-- vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, {})
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
-vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, {})

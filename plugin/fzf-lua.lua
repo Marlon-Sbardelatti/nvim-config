@@ -50,7 +50,7 @@ vim.keymap.set("n", "<leader>sD", fzf.diagnostics_workspace, { desc = "Workspace
 -- LSP
 vim.keymap.set("n", "gd", fzf.lsp_definitions, { desc = "Goto Definition" })
 vim.keymap.set("n", "gD", fzf.lsp_declarations, { desc = "Goto Declaration" })
-vim.keymap.set("n", "gr", fzf.lsp_references, { desc = "References" })
+vim.keymap.set("n", "gR", fzf.lsp_references, { desc = "References" })
 vim.keymap.set("n", "gI", fzf.lsp_implementations, { desc = "Goto Implementation" })
 vim.keymap.set("n", "gy", fzf.lsp_typedefs, { desc = "Goto Type Definition" })
 vim.keymap.set("n", "<leader>ss", fzf.lsp_document_symbols, { desc = "Document Symbols" })
