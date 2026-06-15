@@ -76,3 +76,7 @@ vim.keymap.set("n", "<leader><", ":vertical resize -20<CR>")
 vim.keymap.set("n", "<leader>+", ":resize +10<CR>")
 vim.keymap.set("n", "<leader>-", ":resize -10<CR>")
 vim.keymap.set("n", "<leader>Tn", ":tabnew <CR>")
+
+-- iterate opened buffers
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
