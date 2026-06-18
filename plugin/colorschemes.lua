@@ -26,5 +26,7 @@ vim.pack.add({"https://github.com/savq/melange-nvim"})
 
 vim.pack.add({"https://github.com/aktersnurra/no-clown-fiesta.nvim"})
 
+vim.pack.add({"https://github.com/oskarnurm/koda.nvim"})
+
 -- USED COLORSCHEME
 vim.cmd.colorscheme("moon")
