@@ -113,6 +113,7 @@ local atria_snippets = {
 }
 ls.add_snippets("sql", atria_snippets)
 ls.add_snippets("http", atria_snippets)
+ls.add_snippets("grpc", atria_snippets)
 
 -- Keymaps
 vim.keymap.set({ "i", "s" }, "<C-k>", function()

@@ -195,6 +195,10 @@ vim.lsp.config("yaml-language-server", {
 	capabilities = capabilities,
 })
 
+vim.lsp.config("markdown_oxide", {
+	capabilities = capabilities,
+})
+
 -- vim.lsp.config("kulala", {
 -- 	capabilities = capabilities,
 -- })
@@ -203,6 +207,7 @@ vim.lsp.enable({
 	"rust_analyzer",
 	"html",
 	"lua_ls",
+    "markdown_oxide",
 	"cssls",
 	"biome",
 	"cssmodules_ls",
