@@ -207,7 +207,7 @@ vim.lsp.enable({
 	"rust_analyzer",
 	"html",
 	"lua_ls",
-    "markdown_oxide",
+	"markdown_oxide",
 	"cssls",
 	"biome",
 	"cssmodules_ls",
@@ -247,3 +247,5 @@ vim.lsp.enable({
 -- vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, {})
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
+
+vim.lsp.codelens.enable(true, {})
