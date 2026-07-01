@@ -248,4 +248,10 @@ vim.lsp.enable({
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
 
-vim.lsp.codelens.enable(true, {})
+-- vim.lsp.codelens.enable(true, {})
+vim.keymap.set("n", "<leader>cl", function()
+    local enabled = vim.lsp.codelens.is_enabled()
+    vim.lsp.codelens.enable(not enabled)
+
+    print("CodeLens " .. (not enabled and "enabled" or "disabled"))
+end, { desc = "Toggle CodeLens" })
