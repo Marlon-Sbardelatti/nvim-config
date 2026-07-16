@@ -22,11 +22,13 @@ require("neomodern").setup({
 	}),
 })
 
-vim.pack.add({"https://github.com/savq/melange-nvim"})
+vim.pack.add({ "https://github.com/savq/melange-nvim" })
 
-vim.pack.add({"https://github.com/aktersnurra/no-clown-fiesta.nvim"})
+vim.pack.add({ "https://github.com/aktersnurra/no-clown-fiesta.nvim" })
 
-vim.pack.add({"https://github.com/oskarnurm/koda.nvim"})
+vim.pack.add({ "https://github.com/oskarnurm/koda.nvim" })
+
+vim.pack.add({ "https://github.com/mistweaverco/vhs-era-theme.nvim" })
 
 -- USED COLORSCHEME
-vim.cmd.colorscheme("moon")
+vim.cmd.colorscheme("vhs-era-theme")
