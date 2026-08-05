@@ -240,8 +240,6 @@ vim.lsp.enable({
 
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
-vim.keymap.set('n', '<leader>gj', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
-vim.keymap.set('n', '<leader>gk', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
 
 vim.keymap.set("n", "<leader>cl", function()
     local enabled = vim.lsp.codelens.is_enabled()
