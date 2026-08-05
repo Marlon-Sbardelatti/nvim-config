@@ -128,9 +128,14 @@ vim.lsp.config("gopls", {
 vim.lsp.config("clangd", {
 	capabilities = capabilities,
 })
-vim.lsp.config("csharp_ls", {
+
+vim.lsp.config("roslyn_ls", {
 	capabilities = capabilities,
 })
+
+-- vim.lsp.config("csharp_ls", {
+-- 	capabilities = capabilities,
+-- })
 
 -- vim.lsp.config("pyright", {
 --     capabilities = capabilities,
@@ -195,9 +200,9 @@ vim.lsp.config("yaml-language-server", {
 	capabilities = capabilities,
 })
 
-vim.lsp.config("markdown_oxide", {
-	capabilities = capabilities,
-})
+-- vim.lsp.config("markdown_oxide", {
+-- 	capabilities = capabilities,
+-- })
 
 -- vim.lsp.config("kulala", {
 -- 	capabilities = capabilities,
@@ -233,25 +238,15 @@ vim.lsp.enable({
 	"kulala",
 })
 
--- built in
--- vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
--- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
---  if fzf-lua is set as the ui, this keymaps are not necessary
--- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
--- vim.keymap.set("n", "gra", function()
---     require("fzf-lua").lsp_code_actions()
--- end, {})
--- vim.keymap.set("v", "gra", function()
---   require("fzf-lua").lsp_code_actions()
--- end, {})
--- vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, {})
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
+vim.keymap.set('n', '<leader>gj', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
+vim.keymap.set('n', '<leader>gk', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
 
--- vim.lsp.codelens.enable(true, {})
 vim.keymap.set("n", "<leader>cl", function()
     local enabled = vim.lsp.codelens.is_enabled()
     vim.lsp.codelens.enable(not enabled)
 
     print("CodeLens " .. (not enabled and "enabled" or "disabled"))
 end, { desc = "Toggle CodeLens" })
+

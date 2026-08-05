@@ -31,4 +31,4 @@ vim.pack.add({ "https://github.com/oskarnurm/koda.nvim" })
 vim.pack.add({ "https://github.com/mistweaverco/vhs-era-theme.nvim" })
 
 -- USED COLORSCHEME
-vim.cmd.colorscheme("vhs-era-theme")
+vim.cmd.colorscheme("moon")
