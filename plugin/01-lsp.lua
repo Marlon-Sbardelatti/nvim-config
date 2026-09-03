@@ -184,9 +184,9 @@ vim.lsp.config("dockerls", {
 	capabilities = capabilities,
 })
 
-vim.lsp.config("angularls", {
-	capabilities = capabilities,
-})
+-- vim.lsp.config("angularls", {
+-- 	capabilities = capabilities,
+-- })
 
 vim.lsp.config("ts_ls", {
 	capabilities = capabilities,
@@ -230,7 +230,7 @@ vim.lsp.enable({
 	"sqls",
 	"docker_compose_language_service",
 	"dockerls",
-	"angularls",
+	-- "angularls",
 	"ts_ls",
 	"kube-linter",
 	"yaml-language-server",
@@ -240,6 +240,11 @@ vim.lsp.enable({
 
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
+vim.keymap.set("n", "<leader>qw", vim.diagnostic.setqflist, {})
+vim.keymap.set('n', '<leader>qe', function()
+  vim.diagnostic.setqflist({ severity = vim.diagnostic.severity.ERROR })
+end, { desc = 'Open [Q]uickfix [E]rrors' })
+
 
 vim.keymap.set("n", "<leader>cl", function()
     local enabled = vim.lsp.codelens.is_enabled()
