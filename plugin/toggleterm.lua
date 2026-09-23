@@ -10,3 +10,9 @@ require("toggleterm").setup({
 	persist_size = true,
 	direction = "float",
 })
+
+vim.keymap.set("n", "<leader>gg", function()
+  vim.cmd("ToggleTerm direction=float")
+  vim.cmd("startinsert")
+  vim.fn.chansend(vim.b.terminal_job_id, "lazygit\n")
+end, { desc = "Toggle LazyGit" })
