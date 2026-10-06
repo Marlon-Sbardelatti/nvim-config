@@ -25,11 +25,11 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "fzf-lua": {
-      "rev": "ec1b98d3f5f44a1cff1f2c3832af2f09c3d806ca",
+      "rev": "ed0e0ead1789ee349cbf025900931fb402b1e05e",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "070a5d7b985546cc57e1fc61e5bc507fecac6045",
+      "rev": "851a051e2bd2caba97e23314c68d69f1b1cf5d19",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "godoc.nvim": {
@@ -47,8 +47,8 @@
       "src": "https://github.com/oskarnurm/koda.nvim"
     },
     "kulala.nvim": {
-      "rev": "dcad056448773ae5b54cadbfdbd188a599cfebd3",
-      "src": "https://github.com/mistweaverco/kulala.nvim"
+      "rev": "1517fd8779b5d83ef7064709a3a7d03e72a899bf",
+      "src": "https://github.com/dont-be-evil-company/kulala.nvim"
     },
     "lspkind.nvim": {
       "rev": "c7274c48137396526b59d86232eabcdc7fed8a32",
@@ -131,7 +131,7 @@
       "src": "https://github.com/thehamsta/nvim-dap-virtual-text"
     },
     "nvim-lspconfig": {
-      "rev": "a9bb4d5f4276aa5cddc015faa3ecc5a7b5a26b14",
+      "rev": "910f0c4d46aa186641518395bc7e6fffb4d23baf",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -144,11 +144,11 @@
       "version": "4.0.0 - 5.0.0"
     },
     "nvim-treesitter": {
-      "rev": "728e031f6b11d03d1f0708b7dc4fb0f1d9c8a137",
+      "rev": "e289100ff98969e118c702199d88b764ce9e7fdf",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-ts-autotag": {
-      "rev": "88c1453db4ba7dd24131086fe51fdf74e587d275",
+      "rev": "d7220b55e16ed3c04e88086256def5d282429493",
       "src": "https://github.com/windwp/nvim-ts-autotag"
     },
     "nvim-web-devicons": {
