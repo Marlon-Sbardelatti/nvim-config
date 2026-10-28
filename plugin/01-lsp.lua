@@ -125,9 +125,25 @@ vim.lsp.config("gopls", {
 	capabilities = capabilities,
 })
 
-vim.lsp.config("clangd", {
+-- Clangd setup using new API
+vim.lsp.config.clangd = {
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--clang-tidy",
+		"--header-insertion=iwyu",
+		"--completion-style=detailed",
+		"--function-arg-placeholders",
+		"--fallback-style=llvm",
+	},
+	filetypes = { "c", "cpp", "objc", "objcpp" },
+	root_markers = {
+		"compile_commands.json",
+		"compile_flags.txt",
+		".git",
+	},
 	capabilities = capabilities,
-})
+}
 
 vim.lsp.config("roslyn_ls", {
 	capabilities = capabilities,
@@ -235,21 +251,18 @@ vim.lsp.enable({
 	"kube-linter",
 	"yaml-language-server",
 	"bashls",
-	"kulala",
+	-- "kulala",
 })
-
 
 vim.keymap.set("n", "<leader>ts", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<leader>qw", vim.diagnostic.setqflist, {})
-vim.keymap.set('n', '<leader>qe', function()
-  vim.diagnostic.setqflist({ severity = vim.diagnostic.severity.ERROR })
-end, { desc = 'Open [Q]uickfix [E]rrors' })
-
+vim.keymap.set("n", "<leader>qe", function()
+	vim.diagnostic.setqflist({ severity = vim.diagnostic.severity.ERROR })
+end, { desc = "Open [Q]uickfix [E]rrors" })
 
 vim.keymap.set("n", "<leader>cl", function()
-    local enabled = vim.lsp.codelens.is_enabled()
-    vim.lsp.codelens.enable(not enabled)
+	local enabled = vim.lsp.codelens.is_enabled()
+	vim.lsp.codelens.enable(not enabled)
 
-    print("CodeLens " .. (not enabled and "enabled" or "disabled"))
+	print("CodeLens " .. (not enabled and "enabled" or "disabled"))
 end, { desc = "Toggle CodeLens" })
-

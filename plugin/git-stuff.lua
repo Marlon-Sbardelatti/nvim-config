@@ -21,5 +21,10 @@ vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
 
 		vim.keymap.set("n", "<leader>gp", gitsigns.preview_hunk, { desc = "Preview Hunk" })
 		vim.keymap.set("n", "<leader>gt", gitsigns.toggle_current_line_blame, { desc = "Toggle Blame" })
+		vim.keymap.set("n", "<leader>gq", function()
+			require("gitsigns").setqflist("all")
+		end, { desc = "Git: All Hunks (Quickfix)" })
+        -- vim.keymap.set("n", "]c", gitsigns.next_hunk, { desc = "Next Hunk" })
+        -- vim.keymap.set("n", "[c", gitsigns.prev_hunk, { desc = "Previous Hunk" })
 	end,
 })
